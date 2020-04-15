@@ -1,0 +1,11 @@
+<Mat-card>
+    <form [formGroup]="form" (ngSubmit)="auth.register(form.value)">
+        <Mat-form-field>
+            <input MatInput type="email" placeholder="Email" formControlName="email">
+        </Mat-form-field>
+        <Mat-form-field>
+            <input MatInput type="password" placeholder="Password" formControlName="password">
+        </Mat-form-field>
+        <button Mat-raised-button color="primary" [disabled]="!form.valid">Register</button>
+    </form>
+</Mat-card>
